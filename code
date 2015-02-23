@@ -1,0 +1,33 @@
+# 1
+#include <stdlib.h> 
+#include <stdio.h> 
+int main()
+{
+	int n; // кол-во чисел int *mas = malloc (sizeof(int) * 10);
+	int *mas;
+	printf ("Input size");
+	scanf ("%d",&n);
+	mas = (int*) malloc (sizeof(int) * n);
+	printf("Input numbers");
+	for( int i=0;i!=n;i++)
+	{  
+		scanf ("%d",&mas[i]);
+	}
+	for(int i = n - 1; i >= 1; i--)
+       for(int j = 0; j < i; j++)
+       {
+               if(mas[j] > mas[j+1])
+               {
+                       int a = mas[j];
+                       mas[j] = mas[j+1];
+                       mas[j+1] = a;
+			   };
+	   }
+	for( int i=0;i!=n;i++)
+	{
+		printf ("%d", mas[i] );
+	}
+	free(mas);
+    system ("pause");
+	return 0;
+}
