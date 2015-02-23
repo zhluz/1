@@ -1,36 +1,9 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
 #include <stdlib.h> 
 #include <stdio.h> 
 int main()
 {
-	int n; // кол-во чисел int *mas = malloc (sizeof(int) * 10);
+	int n; // кол-во чисел 
+	int *mas = malloc (sizeof(int) * 10);
 	int *mas;
 	printf ("Input size");
 	scanf ("%d",&n);
@@ -55,6 +28,6 @@ int main()
 		printf ("%d", mas[i] );
 	}
 	free(mas);
-    system ("pause");
+        system ("pause");
 	return 0;
 }
